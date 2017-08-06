@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node --presets latest"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^4.0.0",
+    "koa": "^2.3.0",
+    "koa-logger": "^3.0.1",
+    "koa-router": "^7.2.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.4",
+    "node-schedule": "^1.2.3",
+    "path-exists": "^3.0.0",
+    "pg": "^7.0.2",
+    "request-promise": "^4.2.1",
+    "scrape-it": "^3.3.2",
+    "tibia-api": "^0.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "name": "dwarf-bridge-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Eowfenth/dwarf-bridge-server.git",
+  "author": "<Nícolas 'eowfenth' Deçordi dos Reis>",
+  "license": "MIT"
+}
