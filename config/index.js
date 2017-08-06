@@ -19,6 +19,7 @@ export default {
         experience: `./output/`,
         online: `./output/online/`,
         worlds: `./output/worlds/`,
+        highscore: './output/highscore/',
         killstats: './output/killstats/'
     },
     ids: {
@@ -47,14 +48,7 @@ export default {
                 'loyalty',
                 'fishing',
                 'shielding'],
-            vocations: {
-                all: 0,
-                none: 1,
-                druid: 2,
-                knight: 3,
-                paladin: 4,
-                sorcerer: 5
-            },
+            vocations: ['all', 'none', 'druid', 'knight', 'paladin', 'sorcerer']
         }
     }
 };
