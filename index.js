@@ -1,10 +1,10 @@
 import config from './config';
 import dotenv from 'dotenv';
 import world from './methods/world';
-import character from './methods/character';
-import experience from './methods/experience';
+// import character from './methods/character';
+// import experience from './methods/experience';
 import online from './methods/online';
-import highscore from './methods/highscore';
+// import highscore from './methods/highscore';
 import killstats from './methods/killstats';
 
 import schedule from 'node-schedule';
