@@ -44,8 +44,8 @@ import pg from 'pg';
 
 // experience.getInformation();
 //online.getPlayers('Macabra');
-world.getInformation('Helera');
-// killstats.getKillstatistics('Relembra');
+// world.getInformation('Helera');
+// killstats.getKillstatistics('Antica');
 // highscore.getInformation('Relembra');
 
 

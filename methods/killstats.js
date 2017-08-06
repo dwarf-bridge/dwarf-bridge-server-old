@@ -14,7 +14,7 @@ const getkillStatObject = (race, playersKilledYesteday, slainYesterday, playersK
 }
 const killstatsParser = (body, option) => {
     const $ = util.getCheerio(body);
-    const killStats = { stats: [] };
+    let killStats = { stats: [] };
     console.log(`Parsing...`);
     const stats = $('.BoxContent > form:nth-child(1) > table:nth-child(4) > tbody:nth-child(1)').find('tr').slice(2, -1).each(function(index) {
 
@@ -26,12 +26,16 @@ const killstatsParser = (body, option) => {
         const object = getkillStatObject(race, playersKilledYesteday, slainYesterday, playersKilledLastWeek, slainLastWeek);
         killStats.stats[index] = object;
     });
+
+    if (killStats.stats.length == 0) {
+        killStats = [];
+    }
     util.saveFile(killStats, config.savePath.killstats, option);
 }
 
 
 const getKillstatistics = (world) => {
-    util.getInformation(util.getUrl('killstats', world), killstatsParser, world);
+    util.getInformation(util.getUrl('killstats', world), killstatsParser, { world: world });
 }
 
 export default { getKillstatistics };
