@@ -67,7 +67,7 @@ const onlineJob = schedule.scheduleJob('*/5 * * * *', function() {
 
 const worldJob = schedule.scheduleJob('*/5 * * * *', function() {
     console.log('world is running');
-    setTimeout(world.getInformation, 3000, 'Relemebra');
+    setTimeout(world.getInformation, 3000, 'Relembra');
     setTimeout(world.getInformation, 6000, 'Macabra');
     setTimeout(world.getInformation, 9000, 'Tortura');
     setTimeout(world.getInformation, 12000, 'Helera');
