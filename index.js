@@ -4,12 +4,13 @@ import world from './methods/world';
 // import character from './methods/character';
 // import experience from './methods/experience';
 import online from './methods/online';
-// import highscore from './methods/highscore';
+import highscore from './methods/highscore';
 import killstats from './methods/killstats';
 
 import schedule from 'node-schedule';
 import moment from 'moment';
 import pg from 'pg';
+import chalk from 'chalk';
 
 // const env = dotenv.config()
 
@@ -47,10 +48,19 @@ import pg from 'pg';
 // world.getInformation('Helera');
 // killstats.getKillstatistics('Antica');
 // highscore.getInformation('Relembra');
+console.log(chalk.blue.bold('The bridge is running.'));
 
 
-const ksJob = schedule.scheduleJob('3 6 * * *', function() {
-    console.log('killstats is running');
+const hsJob = schedule.scheduleJob('0 7 * * *', function() {
+    console.log(chalk.red.bold('highscore is running.'));
+    setTimeout(highscore.getInformation, (1* 60 * 1000), 'Relembra');
+    setTimeout(highscore.getInformation, (6* 60 * 1000), 'Macabra');
+    setTimeout(highscore.getInformation, (11* 60 * 1000), 'Tortura');
+    setTimeout(highscore.getInformation, (16* 60 * 1000), 'Helera');
+});
+
+const ksJob = schedule.scheduleJob('5 6 * * *', function() {
+    console.log(chalk.red.bold('killstats is running.'));
     setTimeout(killstats.getKillstatistics, 3000, 'Relembra');
     setTimeout(killstats.getKillstatistics, 6000, 'Macabra');
     setTimeout(killstats.getKillstatistics, 8000, 'Tortura');
@@ -58,7 +68,7 @@ const ksJob = schedule.scheduleJob('3 6 * * *', function() {
 });
 
 const onlineJob = schedule.scheduleJob('*/5 * * * *', function() {
-    console.log('online is running');
+    console.log(chalk.red.bold('online is running.'));
     setTimeout(online.getPlayers, 3000, 'Relembra');
     setTimeout(online.getPlayers, 6000, 'Macabra');
     setTimeout(online.getPlayers, 9000, 'Tortura');
@@ -66,7 +76,7 @@ const onlineJob = schedule.scheduleJob('*/5 * * * *', function() {
 });
 
 const worldJob = schedule.scheduleJob('*/5 * * * *', function() {
-    console.log('world is running');
+    console.log(chalk.red.bold('world is running.'));
     setTimeout(world.getInformation, 3000, 'Relembra');
     setTimeout(world.getInformation, 6000, 'Macabra');
     setTimeout(world.getInformation, 9000, 'Tortura');

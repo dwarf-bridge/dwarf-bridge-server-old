@@ -6,6 +6,7 @@
     "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
+    "chalk": "^2.1.0",
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^4.0.0",
     "koa": "^2.3.0",
