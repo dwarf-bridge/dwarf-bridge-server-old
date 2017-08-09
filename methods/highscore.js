@@ -225,6 +225,7 @@ const getExperienceLadder = (vocationValue, world) => {
             util.getInformation,
             `${pageNumber * 3}000`,
             util.getUrl('highscore', {
+                world: world,
                 profession: vocationValue,
                 currentPage: pageNumber}
             ),

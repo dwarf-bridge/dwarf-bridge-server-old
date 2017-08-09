@@ -13,7 +13,7 @@ const getCheerio = (body) => {
 
 const getUrl = (subject, option = '') => {
     if (subject == 'highscore') {
-        return `https://secure.tibia.com/community/?subtopic=highscores&world=Relembra&list=experience&profession=${option.profession}&currentpage=` + option.currentPage;
+        return `https://secure.tibia.com/community/?subtopic=highscores&world=${option.world}&list=experience&profession=${option.profession}&currentpage=` + option.currentPage;
     } else if (subject === 'world' || subject === 'killstats') {
         return config.URL[subject] + option;
     } else if (subject === 'online') {
